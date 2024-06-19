@@ -63,7 +63,7 @@ router.get(`/categories/:categoryname/products/:productid`, async (req, res) => 
         response.data.sort((a, b) => b.rating - a.rating);
         
 
-        res.json(products); // Send the API response as JSON
+        res.json(products);
     } catch (error) {
         console.error('Error fetching data:', error.message);
         res.status(500).json({ error: 'Failed to fetch data' });
